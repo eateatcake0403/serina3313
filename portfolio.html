@@ -1,0 +1,62 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400&family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="outside aboutme">
+    <div class="top">
+      <a href="index.html"><img class="nameimg" src="name.png"/></a>
+      <a href="aboutme.html" class="text">About me</a>
+      <a href="portfolio.html" class="text">Portfolio</a>
+    </div>
+    <div class="topclear">
+    </div>
+    <div class="por_topback">
+      <img class="proing" src="proing.png"/>
+    </div>
+    <div class="nav">
+      <p class="tab nav_text active" onclick="onTabClick(this)">Project</p>
+      <p class="tab nav_text" onclick="onTabClick(this)">Visual</p>
+      <p class="tab nav_text" onclick="onTabClick(this)">Others</p>
+      <p class="tab nav_text" onclick="onTabClick(this)">All</p>
+    </div>
+    <div class="chart active">
+      <p>sdsd222</p>
+    </div>
+    <div class="chart">
+      <p>sdsd111</p>
+    </div>
+    <div class="chart">
+      <p>sds23213d</p>
+    </div>
+    <div class="chart">
+      <p>sdsd2222</p>
+    </div>
+    <div class="finish">
+      <p class="finish_inner">
+      Tel/ 0939-630-417<br>
+      Mail/ serina3313@gmail.com</p>
+    </div>
+  </div>
+
+<script>
+var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'))
+var charts = Array.prototype.slice.call(document.querySelectorAll('.chart'))
+
+function onTabClick(tab) {
+  tabs.forEach(function(tab) {
+    tab.classList.remove('active')
+  })
+  tab.classList.add('active')
+  charts.forEach(function(chart) {
+    chart.classList.remove('active')
+  })
+  charts[tabs.indexOf(tab)].classList.add('active')
+}
+</script>
+</body>
+</html>
